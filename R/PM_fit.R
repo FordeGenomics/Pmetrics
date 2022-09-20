@@ -51,7 +51,7 @@ PM_fit <- R6::R6Class("PM_fit",
       if (inherits(private$model, "PM_model_legacy")) {
         cat(sprintf("Runing Legacy"))
         if(init="oneatt"){
-            oneATT(private$model$legacy_file_path, private$data$standard_data, engine=engine, ...)
+            oneATT(private$model, private$data, engine=engine, ...)
           }
         else {
           if(engine=="npag"){
