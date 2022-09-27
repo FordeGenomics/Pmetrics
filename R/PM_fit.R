@@ -50,7 +50,7 @@ PM_fit <- R6::R6Class("PM_fit",
       init <- tolower(init)
       if (inherits(private$model, "PM_model_legacy")) {
         cat(sprintf("Runing Legacy"))
-        if(init="oneatt"){
+        if(init=="oneatt"){
             oneATT(private$model, private$data, engine=engine, ...)
           }
         else {
