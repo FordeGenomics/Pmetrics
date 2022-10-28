@@ -1,5 +1,6 @@
+#' @export
 oneATT<-function(model, data, engine, ...){
-    IDs <- (data$data %>% select(id) %>% distinct())[[1]]
+    IDs <- (data$data %>% select(id) %>% dplyr::distinct())[[1]]
     wd <- getwd()
     system("rm -rf oneATT")
     system("mkdir oneATT")
@@ -31,4 +32,4 @@ oneATT<-function(model, data, engine, ...){
     writeLines(den_file,"DEN001")
 }
 
-oneATT(modEx,dataEx)
+# oneATT(modEx,dataEx)

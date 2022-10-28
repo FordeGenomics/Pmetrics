@@ -60,7 +60,7 @@ from a filename}
 \subsection{Method \code{run()}}{
 Fit the model to the data
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PM_fit$run(..., engine = "NPAG")}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{PM_fit$run(..., engine = "NPAG", init = "random")}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -69,6 +69,8 @@ Fit the model to the data
 \item{\code{...}}{Other arguments passed to \link{NPrun}}
 
 \item{\code{engine}}{"NPAG" (default) or "IT2B"}
+
+\item{\code{init}}{"random" (default) initializes the search space using a Faure Sequence or "oneATT" will initialize using the One-At-The-Time algorithm.}
 }
 \if{html}{\out{</div>}}
 }
